@@ -28,8 +28,15 @@
             </ul>
             </nav>
             <ul class="header-contacts">
-                <li ><a class="header-list contact1" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                <li ><a class="header-list contact1" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                <li ><a class="header-list contact1 " href="mailto:info@devstudio.com">
+                        <svg class="email" width="16" height="12">
+                            <use href="/images/icons.svg#icon-envelope-hover-2-2">
+                            </use>
+                        </svg><span>info@devstudio.com</span></a></li>
+                <li ><a class="header-list contact1 " href="tel:+380961111111">
+                        <svg class="phone" width="10" height="16" >
+                            <use href="/images/icons.svg#icon-smartphone-1"></use>
+                        </svg><sspan>+38 096 111 11 11</sspan></a></li>
             </ul>
         </div>
     </header>
@@ -42,12 +49,12 @@
 
 <!--Качества компании section1-->
 
-        <section class="section hero">
-            <div class="container hero-box ">
-            <h1 class="hero-heading">эффективные решения<br>
-                для вашего бизнеса</h1>
-            <button class="hero-btn"  type="button">Заказать услугу</button>
-            </div>
+        <section class="section hero hero-background">
+                <div class="container hero-box ">
+                    <h1 class="hero-heading">эффективные решения<br>
+                    для вашего бизнеса</h1>
+                    <button class="hero-btn"  type="button">Заказать услугу</button>
+                </div>
         </section>
 
 <!-- Hаши качества section2  -->
@@ -57,6 +64,9 @@
             <h2 class="visually-hidden" > Наши качества</h2>
             <ul class="list about-list">
                 <li>
+                    <svg  class="about-icon" width="270" hight="120">
+                        <use href="/images/icons.svg#icon-dish"></use>
+                    </svg>
                     <h3 class="about-heading">Внимание к деталям</h3>
 
                     <p class="description about-description">Идейные соображения, а также<br>
@@ -64,6 +74,9 @@
                         формированию позиции.</p>
                 </li>
                 <li>
+                    <svg class="about-icon" width="270" hight="120">
+                        <use href="/images/icons.svg#icon-clock"></use>
+                    </svg>
                     <h3 class="about-heading">Пунктуальность</h3>
 
                     <p class="description about-description">Задача организации, в особенности<br>
@@ -71,6 +84,9 @@
                         влечет за собой.</p>
                 </li>
                 <li>
+                    <svg class="about-icon" width="270" hight="120">
+                        <use href="/images/icons.svg#icon-laptop"></use>
+                    </svg>
                     <h3 class="about-heading">Планирование</h3>
 
                     <p class="description about-description">Равным образом консультация с<br>
@@ -78,6 +94,9 @@
                         степени обуславливает.</p>
                 </li>
                 <li>
+                    <svg class="about-icon" width="270" hight="120">
+                        <use href="/images/icons.svg#icon-astronaut"></use>
+                    </svg>
                     <h3 class="about-heading">Современные технологии</h3>
                     <p class="description about-description">Значимость этих проблем настолько<br>
                         очевидна, что реализация плановых<br>
@@ -115,28 +134,50 @@
             <div class="container team-box">
             <h2 class="team-heading">Наша команда</h2>
             <ul class="list team-list">
-                <li>
+                <li  class="team-list-hero">
                     <img src="./images/4.jpg"  alt="Игорь Демьяненко" width="270" height="260"/>
                     <div class="team-name">
                         <h3 class="team-subheading">Игорь Демьяненко</h3>
                         <p class="team-description" lang="en">Product Designer</p>
+                        <div class="list team-link-list">
+                            <a href="#" class="team-link">
+                                <svg class="team-social-icon" width="44" hight="44" >
+                                <use href="/images/icons.svg#icon-insta"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="team-link">
+                                <svg class="team-social-icon twit" width="44" hight="44">
+                                    <use href="/images/icons.svg#icon-twit"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="team-link">
+                                <svg class="team-social-icon" width="44" hight="44" >
+                                    <use href="/images/icons.svg#icon-fb"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="team-link">
+                                <svg class="team-social-icon" width="44" hight="44">
+                                    <use href="/images/icons.svg#icon-in"></use>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </li>
-                <li>
+                <li class="team-list-hero">
                     <img src="./images/5.jpg" alt="Ольга Репина" width="270" height="260" />
                     <div class="team-name">
                         <h3 class="team-subheading">Ольга Репина</h3>
                         <p class="team-description" lang="en">Frontend Developer</p>
                     </div>
                 </li>
-                <li>
+                <li class="team-list-hero">
                     <img src="./images/6.jpg" alt="Николай Тарасов" width="270" height="260" />
                     <div class="team-name">
                         <h3  class="team-subheading">Николай Тарасов</h3>
                         <p class="team-description" lang="en">Marketing</p>
                     </div>
                 </li>
-                <li>
+                <li class="team-list-hero">
                     <img src="./images/7.jpg" alt="Михаил Ермаков" width="270" height="260" />
                     <div class="team-name">
                         <h3 class="team-subheading">Михаил Ермаков</h3>
@@ -145,6 +186,29 @@
                 </li>
             </ul>
             </div>
+        </section>
+
+<!-- Clients section5 -->
+
+        <section class="section clients">
+            <div class="container clients-box">
+                <h2 class="clients-heading"> Постоянные клиеты</h2>
+                <ul class="list clients-list">
+                    <li><a href="#" class="clients-link">
+                        <svg width="41" hight="47" class="client-icon">
+                            <use href="/images/icons.svg#icon-client1">
+                            </use>
+                        </svg>
+                    </a></li>
+                    <li><a href="#" class="clients-link">
+                        
+                    </a></li>
+                    <li><a href="#" class="clients-link"></a></li>
+                    <li><a href="#" class="clients-link"></a></li>
+                    <li><a href="#" class="clients-link"></a></li>
+                    <li><a href="#" class="clients-linkk"></a></li>
+                </ul>
+            </div>       
         </section>
 
     </main>

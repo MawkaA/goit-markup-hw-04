@@ -132,7 +132,7 @@ img {
 }
 
 .header-contacts {
-    margin-left: 230px;
+    margin-left: 186px;
     padding: 0;
     list-style-type:none;
     display: flex;
@@ -143,11 +143,42 @@ img {
 
 .header-contacts li {
     margin-left: 50px;
+    display: flex;
+    align-items: center;
 }
 
 
 .contact1 {
     color: var(--secondary-text-color);
+    display: flex;
+    align-items: center;
+}
+
+
+.email {
+    display: inline-block;
+    object-fit: contain;
+    margin-right:10px;
+    cursor: pointer;
+    fill:#757575;
+    max-height: 12px;
+}
+
+.email:hover {
+    fill: var(--accent-color);
+}
+
+.phone {
+    display: inline-block;
+    object-fit: contain;
+    margin-right:10px;
+    cursor: pointer;
+    max-height: 16px;
+    fill:#757575;
+}
+
+.phone:hover {
+    fill:var(--accent-color);
 }
 
 /*---------------------Logo  (2 для хедера, 3 для футера)--------------------------*/
@@ -187,6 +218,18 @@ img {
     height: auto;
     margin:0 auto;
     padding:200px 0;
+}
+
+.hero-background {
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)), 
+    url('../images/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-box {
@@ -259,6 +302,10 @@ img {
 
 .about-list li:not(:last-of-type) {
     margin-right: 30px;
+}
+
+.about-icon {
+    margin-bottom: 30px;
 }
 
 
@@ -343,22 +390,25 @@ img {
 
 .team-list {
     margin: 0 auto;
-    border: 1px solid transparent;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
     padding: 0;
 }
 
 .team-list li{
     padding: 0;
     background-color: var(--primary-white-color);
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
+        0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
-.team-list li:not(:last-of-type){
+.team-list .team-list-hero:not(:last-of-type){
     margin-right:30px;
 }
 
 .team-name {
+    display: block;
     padding:30px 60px ;
     text-align: center;
 }
@@ -373,9 +423,96 @@ img {
 .team-description{
     color: var(--secondary-text-color);
     font-weight: 400;
+    
+}
+
+.team-link-list {
+    border: black solid;
+    display: flex;
+    margin-top:16px ;
+    padding: 0;
+}
+
+.team-link:not(last-of-type){
+    margin-right: 10px; 
+}
+
+.team-link {
+    display: inline-block;
+    margin:0 auto;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    border: red;
+    border-radius: 50%;
+    background-color: var(--primary-white-color);
+    
 }
 
 
+.team-social-icon {
+    object-position: center;
+    object-fit: contain;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+}
+
+.twit {
+    width: 20px;
+    height: 16px;
+    position: 50% 50%;
+}
+
+/* --------------------------------INDEX clients--------------------- */
+.clients {
+    background-color: var(--primary-white-color);
+    height: auto;
+    margin: 0 auto;
+}
+
+.clients-box {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+.clients-heading {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.89;
+    color: inherit;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.clients-list {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.clients-list li {
+    width: 170px;
+    height: 92px;
+    cursor: pointer;
+    border: black solid;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.clients-list li:not(:last-of-type) {
+    margin-right: 30px;
+}
+
+.client-icon {
+    stroke: #AFB1B8;
+    object-fit: contain;
+    object-position: center;
+}
 /*------------------------------------FOOTER-----------------------*/
 
 .footer {
@@ -475,6 +612,9 @@ img {
 .portfolio-btn-filter:hover, .filter:focus {
     background-color: var(--accent-color);
     color:var(--primary-white-color);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12),
+        0 1px 2px 0 rgba(0, 0, 0, 0.08),
+        0 3px 1px 0 rgba(0, 0, 0, 0.01);
 }
 
 
@@ -491,17 +631,28 @@ img {
 }
 
 .portfolio-items li {
-    border: 1px solid #EEEEEE;
     background-color: var(--primary-white-color);
     margin:0 30px 30px 0;
-    padding: 0;
+    padding: 0 auto;
     width: 370px;
 }
 
+.portfolio-items li:hover,
+.portfolio-items li:focus {
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16),
+        0 4px 4px 0 rgba(0, 0, 0, 0.06),
+        0 1px 1px 0 rgb(0,0,0, 0.12);
+}
+
 .items-sign {
+    margin: 0 auto;
     padding: 20px 24px;
     text-align: left;
+    width: inherit;
+    border: 1px solid rgba(238, 238, 238, 1);
+    border-top: transparent;
 }
+
 .portfolio-heading {
     color: inherit;
     font-size: 18px;
