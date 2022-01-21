@@ -521,7 +521,14 @@ img {
     margin: 0 auto;
     padding-top:60px;
     padding-bottom: 60px;
-    display: block;
+}
+
+.footer-main-list {
+    margin: 0 auto;;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    
 }
 
 .footer-address {
@@ -561,7 +568,24 @@ img {
     color: rgba(255,255,255, 0.6);
 }
 
+.footer-social-link {
+    margin-left: 70px;
+    margin-top: 12px ;
+    padding: 0;
+}
 
+.footer-header {
+    font-family:'Roboto',sans-serif;
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    line-height: 0.87;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.social li {
+    margin-right: 10px;
+}
 /*----------------------------PORTFOLIO контент----------------------------------*/
 
 .portfolio {
