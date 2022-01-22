@@ -503,6 +503,7 @@ background-color: var(--accent-color);
 
 .clients-list {
     margin: 0 auto;
+    padding: 0;
     display: flex;
     justify-content: center;
     
