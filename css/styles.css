@@ -412,13 +412,18 @@ img {
     border-bottom-left-radius: 4px;
 }
 
+.team-list-hero {
+    display: block;
+    max-width:270px
+}
+
 .team-list .team-list-hero:not(:last-of-type){
     margin-right:30px;
 }
 
 .team-name {
     display: block;
-    padding:30px 60px ;
+    padding:30px ;
     text-align: center;
 }
 .team-subheading {
