@@ -122,13 +122,15 @@ img {
     text-decoration: none;
 }
 
-.header-list:hover, .header:focus { 
+.header-list:hover, 
+.header-list:focus,
+.header-list.active { 
     color: var(--accent-color);
 }
 
+.header-list:hover svg {
+    fill: var(--accent-color);
 
-.header-list.active {
-    color: var(--accent-color);
 }
 
 .header-contacts {
@@ -164,9 +166,7 @@ img {
     max-height: 12px;
 }
 
-.email:hover {
-    fill: var(--accent-color);
-}
+
 
 .phone {
     display: inline-block;
@@ -177,9 +177,6 @@ img {
     fill:#757575;
 }
 
-.phone:hover {
-    fill:var(--accent-color);
-}
 
 /*---------------------Logo  (2 для хедера, 3 для футера)--------------------------*/
 
@@ -287,7 +284,7 @@ img {
 }
 
 .about-list {
-    margin:0;
+    margin:0 auto;
     padding: 0;
     display: flex;
     flex-direction: row;
@@ -297,15 +294,27 @@ img {
 
 .about-list li {
     width: 270px;
-    
+    height: auto;
 }
 
 .about-list li:not(:last-of-type) {
     margin-right: 30px;
 }
 
-.about-icon {
+.about-icon-box {
     margin-bottom: 30px;
+    width:270px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    background-color: rgba(245, 244, 250, 1);
+}
+
+.about-icon {
+    object-position: center;
+    object-fit: contain;
+    position: 50% 50%;
 }
 
 
@@ -393,7 +402,7 @@ img {
     padding: 0;
 }
 
-.team-list li{
+.team-list .team-list-hero{
     padding: 0;
     background-color: var(--primary-white-color);
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2),
@@ -427,42 +436,42 @@ img {
 }
 
 .team-link-list {
-    border: black solid;
     display: flex;
     margin-top:16px ;
     padding: 0;
 }
 
-.team-link:not(last-of-type){
+.team-link-list li:not(:last-child){
     margin-right: 10px; 
 }
 
-.team-link {
-    display: inline-block;
-    margin:0 auto;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    border: red;
-    border-radius: 50%;
-    background-color: var(--primary-white-color);
-    
-}
-
-
-.team-social-icon {
-    object-position: center;
-    object-fit: contain;
+.team-link-list li{
     width: 44px;
     height: 44px;
-    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.twit {
-    width: 20px;
-    height: 16px;
-    position: 50% 50%;
+.team-link { 
+    margin:0 auto;
+    padding: 0;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.team-link:hover,
+.team-link:focus,
+.team-link:active {
+background-color: var(--accent-color);
+}
+
+
+
 
 /* --------------------------------INDEX clients--------------------- */
 .clients {
@@ -498,21 +507,39 @@ img {
     width: 170px;
     height: 92px;
     cursor: pointer;
-    border: black solid;
-    display: inline-block;
     margin: 0 auto;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:inset 1px #AFB1B8;
+    border-radius: 4px;
+    box-shadow:none;
+    
+}
+
+.clients-list li:focus,
+.clients-list li:active,
+.clients-list li:hover {
+    border-color: var(--accent-color);
+    fill: var(--accent-color);
+}
+
+.clients-list li:hover svg {
+    fill: var(--accent-color);
 }
 
 .clients-list li:not(:last-of-type) {
     margin-right: 30px;
 }
 
+
 .client-icon {
-    stroke: #AFB1B8;
     object-fit: contain;
     object-position: center;
+    fill: #afb1b8;
 }
+
 /*------------------------------------FOOTER-----------------------*/
 
 .footer {
@@ -524,11 +551,15 @@ img {
 }
 
 .footer-main-list {
-    margin: 0 auto;;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
-    align-content: center;
+    justify-content: flex-start;
     
+}
+
+.footer-box-adress {
+    width: 230px;
 }
 
 .footer-address {
@@ -569,6 +600,8 @@ img {
 }
 
 .footer-social-link {
+    display: flex;
+    flex-direction: column;
     margin-left: 70px;
     margin-top: 12px ;
     padding: 0;
@@ -581,11 +614,42 @@ img {
     line-height: 0.87;
     text-decoration: none;
     text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0;
+    margin-left: 0;
+}
+
+.social {
+    padding: 0;
+    margin: 0 auto;
 }
 
 .social li {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 44px;
+    max-height: 44px;
     margin-right: 10px;
 }
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--accent-color);
+}
+
 /*----------------------------PORTFOLIO контент----------------------------------*/
 
 .portfolio {
