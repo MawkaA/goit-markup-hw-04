@@ -541,7 +541,7 @@ img {
 .clients-link:hover svg {
     fill: var(--accent-color);
 }
-.clients-link li:focus svg {
+.clients-link:focus svg {
     fill: var(--accent-color);
 }
 
